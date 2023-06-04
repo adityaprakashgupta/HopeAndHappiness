@@ -1,0 +1,433 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hope and Happiness - Psychology and Counseling</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/img/favicon.jpg' %}">
+        
+		<!-- CSS here -->
+        <link rel="stylesheet" href="{% static 'home/css/preloader.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/metisMenu.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/default.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->  
+
+        <!-- pre loader area start -->
+         <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                </div>
+            </div> 
+        </div>
+        <!-- pre loader area end -->
+
+        <!-- header area start -->
+        <header>
+            <marquee>This Site is under development</marquee>
+            <div id="header-sticky" class="header-area tranparent-header box-105">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                            <div class="logo">
+                                <a href="{% url 'home:index' %}"><img src="{% static 'home/img/logo/demologo.jpeg' %}" alt="logo" width="100%"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-9 d-none d-lg-block">
+                            <!-- menu area start -->
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <li><a href="{% url 'home:index' %}">home</a>
+                                        </li>
+                                        <li><a href="{% url 'home:about' %}">about</a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="">about us</a></li>
+                                                <li><a href="about-me.html">about me</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li> <a href="{% url 'home:services' %}">services</a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="services.html">services</a></li>
+                                                <li><a href="services-details.html">service details</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <!-- <li class="has-dropdown"><a href="case.html">cases</a>
+                                            <ul class="submenu">
+                                                <li><a href="case.html">case </a></li>
+                                                <li><a href="case-details.html">case details</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="has-dropdown"><a href="index.html#">pages</a>
+                                            <ul class="submenu">
+                                                <li><a href="team.html">our team</a></li>
+                                                <li><a href="team-details.html">team details</a></li>
+                                                <li><a href="events.html">events and offers</a></li>
+                                                <li><a href="appointment.html">appointment</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="has-dropdown"><a href="blog.html">blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">blog </a></li>
+                                                <li><a href="blog-left-sidebar.html">blog Left Sidebar</a></li>
+                                                <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
+                                                <li><a href="blog-2-col.html">blog 2 column</a></li>
+                                                <li><a href="blog-2-col-mas.html">blog 2 col masonary</a></li>
+                                                <li><a href="blog-3-col.html">blog 3 column</a></li>
+                                                <li><a href="blog-3-col-mas.html">blog 3 col mas</a></li>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                                <li><a href="blog-details-left.html">details left sidebar</a></li>
+                                                <li><a href="blog-details-video.html">details video</a></li>
+                                                <li><a href="blog-details-audio.html">details audio</a></li>
+                                                <li><a href="blog-details-gallery.html">details gallery</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="{% url 'home:contact' %}">contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- menu area end -->
+                        </div>
+                        <div class="col-xl-3 col-lg-1 col-md-9 col-sm-6 col-6">
+                            <div class="header-bar info-toggle-btn f-right">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="header-cta f-right d-none d-sm-inline-block d-md-inline-block d-lg-none d-xl-inline-block">
+                                <span class="icon flaticon-24-hours-support"><a href="tel:+918130827852">+91 (813) 082-7852</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+         <!-- header area start -->
+                 <!-- info area start -->
+        <section class="info__area transition-3">
+            <div class="info__area-inner">
+                <div class="info__area-wrapper">
+                    <div class="info__close-icon text-right">
+                        <button class="info-close-btn"><i class="fal fa-times"></i></button>
+                    </div>
+                    <div class="info__wrapper">
+                        <div class="info__logo mt-25 mb-30">
+                            <a href="index.html"><img src="{% static 'home/img/logo/logo.png' %}" alt="logo"></a>
+                        </div>
+    
+                        <div class="info__content">
+                            <h4>About Us</h4>
+                            <p>Content #1</p>
+    
+                            <a href="contact.html" class="s-btn s-btn__white">Contact us</a>
+                        </div>
+                        <div class="info__contact">
+                            <h3>contact info</h3>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Address #1</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>+91 </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fal fa-envelope-open"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span><a href="mailto:contact@hopeandhappiness.in">contact@hopeandhappiness.in</a></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- side-mobile-menu start -->
+                <nav class="side-mobile-menu">
+                    <div class="info__close-icon text-right mb-20">
+                        <button class="info-close-btn"><i class="fal fa-times"></i></button>
+                    </div>
+                    <ul id="mobile-menu-active">
+                        <li><a href="{% url 'home:index' %}">home</a>
+                            
+                        </li>
+                        <li><a href="{% url 'home:about' %}">about</a>
+                            <!-- <ul class="submenu">
+                                <li><a href="about-us.html">about us</a></li>
+                                <li><a href="about-me.html">about me</a></li>
+                            </ul> -->
+                        </li>
+                        <li> <a href="{% url 'home:services' %}">services</a>
+                            <!-- <ul class="submenu">
+                                <li><a href="services.html">services</a></li>
+                                <li><a href="services-details.html">service details</a></li>
+                            </ul> -->
+                        </li>
+                        <!-- <li class="has-dropdown"><a href="case.html">cases</a>
+                            <ul class="submenu">
+                                <li><a href="case.html">case </a></li>
+                                <li><a href="case-details.html">case details</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown"><a href="index.html#">pages</a>
+                            <ul class="submenu">
+                                <li><a href="team.html">our team</a></li>
+                                <li><a href="team-details.html">team details</a></li>
+                                <li><a href="events.html">events and offers</a></li>
+                                <li><a href="appointment.html">appointment</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown"><a href="blog.html">blog</a>
+                            <ul class="submenu">
+                                <li><a href="blog.html">blog </a></li>
+                                <li><a href="blog-left-sidebar.html">blog Left Sidebar</a></li>
+                                <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
+                                <li><a href="blog-2-col.html">blog 2 column</a></li>
+                                <li><a href="blog-2-col-mas.html">blog 2 col masonary</a></li>
+                                <li><a href="blog-3-col.html">blog 3 column</a></li>
+                                <li><a href="blog-3-col-mas.html">blog 3 col mas</a></li>
+                                <li><a href="blog-details.html">blog details</a></li>
+                                <li><a href="blog-details-left.html">details left sidebar</a></li>
+                                <li><a href="blog-details-video.html">details video</a></li>
+                                <li><a href="blog-details-audio.html">details audio</a></li>
+                                <li><a href="blog-details-gallery.html">details gallery</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="{% url 'home:contact' %}">contact</a></li>
+                    </ul>
+                </nav>
+                <!-- side-mobile-menu end -->
+            </div>
+        </section>
+        <div class="body-overlay transition-3"></div>
+        <!-- info area end -->
+
+        <!-- scroll up area start -->
+        <div class="scroll-up" id="scroll" style="display: none;">
+            <a href="javascript:void(0);"><i class="far fa-angle-up"></i></a>
+        </div>
+        <!-- scroll up area end -->
+
+        {% block content %}
+        
+        {% endblock content %}
+
+        <!-- footer area start -->
+        <footer>
+            <div class="footer__area footer-bg box-105">
+                <div class="container-fluid">
+<!--                     <div class="footer__top" data-background="{% static 'home/img/bg/pattern-2.jpg' %}">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3">
+                                <div class="award__slider grey-bg-2 text-center">
+                                    <h1>Certificate & Awards </h1>
+                                </div>
+                            </div>
+                            <div class="col-xl-9">
+                                <div class="award__slider-active d-flex owl-carousel">
+                                    <div class="award__item">
+                                        <div class="award__thumb">
+                                            <a href="index.html#"><img src="{% static 'home/img/award/award-1.png' %}" alt="award"></a>
+                                        </div>
+                                    </div>
+                                    <div class="award__item">
+                                        <div class="award__thumb">
+                                            <a href="index.html#"><img src="{% static 'home/img/award/award-2.png' %}" alt="award"></a>
+                                        </div>
+                                    </div>
+                                    <div class="award__item">
+                                        <div class="award__thumb">
+                                            <a href="index.html#"><img src="{% static 'home/img/award/award-3.png' %}" alt="award"></a>
+                                        </div>
+                                    </div>
+                                    <div class="award__item">
+                                        <div class="award__thumb">
+                                            <a href="index.html#"><img src="{% static 'home/img/award/award-4.png' %}" alt="award"></a>
+                                        </div>
+                                    </div>
+                                    <div class="award__item">
+                                        <div class="award__thumb">
+                                            <a href="index.html#"><img src="{% static 'home/img/award/award-5.png' %}" alt="award"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="footer__bottom pt-130 pb-50">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 mb-50">
+                                <div class="footer__widget">
+                                    <div class="footer__widget-title mb-30">
+                                        <div class="logo">
+                                            <a href="index.html"><img src="{% static 'home/img/logo/logo.png' %}" alt="logo"></a>
+                                        </div>
+                                    </div>
+                                    <div class="footer__widget-content">
+                                        <div class="footer__logo-area">
+                                            <p>Content #2</p>
+        
+                                            <div class="social">
+                                                <h4>Follow us</h4>
+                                                <ul>
+                                                    <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="index.html#"><i class="fab fa-pinterest-p"></i></a></li>
+                                                    <li><a href="index.html#"><i class="fab fa-instagram"></i></a></li>
+                                                    <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 offset-xl-1 mb-50">
+                                <div class="footer__widget">
+                                    <div class="footer__widget-title mb-25">
+                                        <h2>Services</h2>
+                                    </div>
+                                    <div class="footer__widget-content">
+                                        <div class="footer__services">
+                                            <ul>
+                                                <li><a href="services-details.html">Business Frustation</a></li>
+                                                <li><a href="services-details.html">Anxiety Dosorder</a></li>
+                                                <li><a href="services-details.html">Personal Meeting</a></li>
+                                                <li><a href="services-details.html">Couple Therapy</a></li>
+                                                <li><a href="services-details.html">Family Counselling</a></li>
+                                                <li><a href="services-details.html">Dating & Relation</a></li>
+                                                <li><a href="services-details.html">Depression Problem</a></li>
+                                                <li><a href="services-details.html">Mental Problem</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 mb-50">
+                                <div class="footer__widget">
+                                    <div class="footer__widget-title mb-25">
+                                        <h2>Contact Info</h2>
+                                    </div>
+                                    <div class="footer__widget-content">
+                                        <div class="footer__contact-info">
+                                            <ul>
+                                                <li>
+                                                    <div class="footer__contact-address">
+                                                        <span>Address #2</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="footer__contact-item">
+                                                        <h6>Email:</h6>
+                                                        <p><a href="mailto:contact@hopeandhappiness.in">contact@hopeandhappiness.in</a></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="footer__contact-item">
+                                                        <h6>Support:</h6>
+                                                        <p>+91 813 082 7852</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="footer__contact-item">
+                                                        <h6>Website:</h6>
+                                                        <p>hopeandhappiness.in</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 offset-xl-1 mb-50">
+                                <div class="footer__widget">
+                                    <div class="footer__widget-title mb-25">
+                                        <h2>Stay in Touch</h2>
+                                    </div>
+                                    <div class="footer__widget-content">
+                                        <div class="footer__subscribe">
+                                            <p>Fruitful and herb the seasons of fish saying likeness face beast cattle.</p>
+                                            <div class="footer__subscribe-form">
+                                                <form action="index.html#">
+                                                    <input type="email" placeholder="Email Address">
+                                                    <button class="s-btn" type="submit"><i class="fal fa-paper-plane"></i> subscribe now</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="footer__copyright-text">
+                                    <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="{% url 'home:index' %}"> Hope and Happiness</a>. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="footer__policy ">
+                                    <a href="index.html#">Terms & Condition</a>
+                                    <a href="index.html#"> Privacy</a>
+                                    <a href="index.html#">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+
+
+		<!-- JS here -->
+        <script src="{% static 'home/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+        <script src="{% static 'home/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'home/js/vendor/waypoints.min.js' %}"></script>
+        <script src="{% static 'home/js/popper.min.js' %}"></script>
+        <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'home/js/metisMenu.min.js' %}"></script>
+        <script src="{% static 'home/js/slick.min.js' %}"></script>
+        <script src="{% static 'home/js/jquery.fancybox.min.js' %}"></script>
+        <script src="{% static 'home/js/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'home/js/ajax-form.js' %}"></script>
+        <script src="{% static 'home/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'home/js/wow.min.js' %}"></script>
+        <script src="{% static 'home/js/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'home/js/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'home/js/main.js' %}"></script>
+    </body>
+</html> 
