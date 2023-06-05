@@ -4,7 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Hope and Happiness - Psychology and Counseling</title>
+        <!-- <title>Hope and Happiness - Psychology and Counseling</title> -->
+        <title>{% block title %}{% endblock title %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -134,14 +135,14 @@
                     </div>
                     <div class="info__wrapper">
                         <div class="info__logo mt-25 mb-30">
-                            <a href="index.html"><img src="{% static 'home/img/logo/logo.png' %}" alt="logo"></a>
+                            <a href="{% url 'home:index' %}"><img src="{% static 'home/img/logo/mainlogowhite.png' %}" alt="logo" width="100%"></a>
                         </div>
     
                         <div class="info__content">
                             <h4>About Us</h4>
                             <p>Content #1</p>
     
-                            <a href="contact.html" class="s-btn s-btn__white">Contact us</a>
+                            <a href="{% url 'home:contact' %}" class="s-btn s-btn__white">Contact us</a>
                         </div>
                         <div class="info__contact">
                             <h3>contact info</h3>
@@ -159,7 +160,7 @@
                                         <i class="fal fa-phone"></i>
                                     </div>
                                     <div class="text">
-                                        <span>+91 </span>
+                                        <span><a href="tel:+918130827852">+91 (813) 082-7852</a></span>
                                     </div>
                                 </li>
                                 <li>
@@ -292,7 +293,7 @@
                                 <div class="footer__widget">
                                     <div class="footer__widget-title mb-30">
                                         <div class="logo">
-                                            <a href="{% url 'home:index' %}"><img src="{% static 'home/img/logo/mainlogo.png' %}" alt="logo"></a>
+                                            <a href="{% url 'home:index' %}"><img src="{% static 'home/img/logo/mainlogo.png' %}" alt="logo" width="100%"></a>
                                         </div>
                                     </div>
                                     <div class="footer__widget-content">

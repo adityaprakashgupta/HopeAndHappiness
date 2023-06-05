@@ -6383,4 +6383,10 @@ p {
   }
 }
 
+.svg__logo__img__white path{
+  fill: white;
+}
+.svg__logo__img__black path{
+  fill: black;
+}
 /*# sourceMappingURL=style.css.map */
