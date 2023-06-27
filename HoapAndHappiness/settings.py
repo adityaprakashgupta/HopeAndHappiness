@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-^g26=3h)8t5vd#-f+tbid4otixcsc%+3ukd)mcuvk-hxooe)yy"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if os.environ.get("MODE") == "DEV" else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "apps.home",
     "apps.accounts",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -142,13 +143,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-# STATIC_ROOT = BASE_DIR / "static"
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+
+if DEBUG:
+    STATIC_URL = "static/"
+    # STATIC_ROOT = BASE_DIR / "static"
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+else:
+    from HoapAndHappiness.aws import *
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -156,3 +161,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'accounts.User'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.hopeandhappiness.in",
+    "https://hopeandhappiness.in",
+    "http://localhost",
+    "http://127.0.0.1"
+]
