@@ -16,3 +16,6 @@ def services(request):
 
 def contact(request):
 	return render(request, "home/contact.html")
+
+def appointment(request):
+	return render(request, "home/appointment.html")
