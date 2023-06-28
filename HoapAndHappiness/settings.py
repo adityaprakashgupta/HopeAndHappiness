@@ -96,7 +96,7 @@ DB_IS_AVAIL = all([
     DB_PORT
 ])
 
-if DB_IS_AVAIL:
+if DB_IS_AVAIL and not DEBUG:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
