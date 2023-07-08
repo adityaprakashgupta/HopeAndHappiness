@@ -1,6 +1,7 @@
 from django.db import models
 from nanoid import generate
 
+
 # Create your models here.
 def make_nanoid():
 	return generate(size=16)

@@ -1,6 +1,8 @@
-from django.core.files.images import get_image_dimensions
 from django import forms
+from django.core.files.images import get_image_dimensions
+
 from .models import HeroSection
+
 
 class HeroSectionForm(forms.ModelForm):
 	class Meta:
@@ -16,5 +18,4 @@ class HeroSectionForm(forms.ModelForm):
 			if w != 1045 and h != 720:
 				raise forms.ValidationError("Image should be of dimention 1045x720.")
 		return image
-
 

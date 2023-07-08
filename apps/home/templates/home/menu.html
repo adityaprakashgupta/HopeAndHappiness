@@ -1,0 +1,20 @@
+{% load i18n menu_tags cache %}
+
+{% for child in children %}
+    <li class="{% if child.ancestor %}ancestor{% endif %}
+        {% if child.selected %} active{% endif %}
+        {% if child.children %} has-dropdown{% endif %}">
+        {% if child.children %}
+            <a>
+                {{ child.get_menu_title }}
+            </a>
+            <ul class="submenu">
+                {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+            </ul>
+        {% else %}
+            <a href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        {% endif %}
+    </li>
+    {% if class and forloop.last and not forloop.parentloop %}{% endif %}
+{% endfor %}
+
