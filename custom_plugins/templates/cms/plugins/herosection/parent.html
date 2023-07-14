@@ -1,0 +1,13 @@
+{% load static cms_tags %}
+<!-- slider area start -->
+<div class="slider-area p-relative" data-background="{% static 'home/img/slider/slider-bg.jpg' %}">
+    <div class="slider-bg-text p-absolute">
+        <h2 class="vert-move">H&H</h2>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="slider-active">
+            {% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}
+        </div>
+    </div>
+</div>
+<!-- slider area end -->

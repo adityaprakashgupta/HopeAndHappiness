@@ -1,0 +1,19 @@
+{% load cms_tags %}
+<div class="single-slider slider-height d-flex align-items-center">
+    <div class="row align-items-center no-gutters mt-40">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+            <div class="slider-content">
+                <span data-animation="fadeInUp" data-delay=".2s">{{ instance.heading }}</span>
+                <h2 data-animation="fadeInUp" data-delay=".4s">{{ instance.description }}</h2>
+                <div class="slider-btn" data-animation="fadeInUp" data-delay=".6s">
+                    <a href="/contact" class="s-btn s-btn__white">Contact Us now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 d-none d-md-inline-block">
+            <div class="slider-thumb text-right" data-animation="fadeInRight" data-delay=".8s">
+                <img src="{{ instance.image.url }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@
 
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/img/favicon.jpg' %}">
-        
+
 		<!-- CSS here -->
         <link rel="stylesheet" href="{% static 'home/css/preloader.css' %}">
         <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
@@ -34,7 +34,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->  
+        <!-- Add your site or application content here -->
 
         <!-- pre loader area start -->
          {% comment %} <div id="loading">
@@ -44,7 +44,7 @@
                     <div class="object" id="object_two"></div>
                     <div class="object" id="object_three"></div>
                 </div>
-            </div> 
+            </div>
         </div> {% endcomment %}
         <!-- pre loader area end -->
 
@@ -95,11 +95,11 @@
                         <div class="info__logo mt-25 mb-30">
                             {% static_placeholder "Logo" %}
                         </div>
-    
+
                         <div class="info__content">
                             <h4>About Us</h4>
                             {% static_placeholder "Short About" %}
-    
+
                             <a href="" class="s-btn s-btn__white">Contact us</a>
                         </div>
                         <div class="info__contact">
@@ -153,10 +153,11 @@
             <a href="javascript:void(0);"><i class="far fa-angle-up"></i></a>
         </div>
         <!-- scroll up area end -->
-
+        <main>
         {% block content %}
-        
+
         {% endblock content %}
+        </main>
 
         <!-- footer area start -->
         <footer>
@@ -212,7 +213,7 @@
                                     <div class="footer__widget-content">
                                         <div class="footer__logo-area">
                                             {% static_placeholder "Short About" %}
-        
+
                                             <div class="social">
                                                 <h4>Follow us</h4>
                                                 <ul>
@@ -345,4 +346,4 @@
         <script src="{% static 'home/js/main.js' %}"></script>
         {% render_block "js" %}
     </body>
-</html> 
+</html>

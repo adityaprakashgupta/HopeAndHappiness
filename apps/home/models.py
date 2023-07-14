@@ -14,8 +14,3 @@ class UtilModel(models.Model):
 
 	class Meta:
 		abstract = True
-	
-class HeroSection(UtilModel):
-	heading = models.CharField(max_length=50)
-	description = models.TextField()
-	image = models.ImageField(upload_to='home/image/HeroSection', help_text="Image should be of dimention 1045x720.")
