@@ -215,3 +215,22 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+if not DEBUG:
+    FILER_STORAGES = {
+        'public': {
+            'main': {
+                'ENGINE': 'HoapAndHappiness.aws.backends.MediaS3Boto3Storage',
+                'OPTIONS': {},
+                'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
+                'UPLOAD_TO_PREFIX': 'uploads',
+            },
+            'thumbnails': {
+                'ENGINE': 'HoapAndHappiness.aws.backends.MediaS3Boto3Storage',
+                'OPTIONS': {},
+                'THUMBNAIL_OPTIONS': {
+                    'base_dir': 'uploads_thumbnails',
+                },
+                },
+            },
+        }

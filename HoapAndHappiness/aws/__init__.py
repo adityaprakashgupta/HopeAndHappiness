@@ -9,3 +9,7 @@ STORAGES = {"default": {"BACKEND": "HoapAndHappiness.aws.backends.MediaS3Boto3St
 # AWS_S3_ADDRESSING_STYLE = "path"
 # AWS_S3_SIGNATURE_VERSION = "s3v4"
 AWS_QUERYSTRING_AUTH = False
+
+STATIC_URL = "https://hopeandhappiness.s3.ap-south-1.amazonaws.com/static/"
+MEDIA_URL = 'https://hopeandhappiness.s3.ap-south-1.amazonaws.com/media/'
+# DEFAULT_FILE_STORAGE = "HoapAndHappiness.aws.backends.MediaS3Boto3Storage"
