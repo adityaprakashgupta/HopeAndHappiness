@@ -1,7 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import gettext_lazy as _
-from .models import HTMLTagPluginModel, HeroChildPlugin
+from .models import HTMLTagPluginModel, HeroChildPlugin, FeatureModel
 from .forms import HTMLTagPluginForm
 
 
@@ -52,4 +52,16 @@ class HeroSectionChildCMSPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(HeroSectionChildCMSPlugin, self).render(context, instance, placeholder)
+        return context
+
+
+@plugin_pool.register_plugin
+class FeatureSectionParentCMSPlugin(CMSPluginBase):
+    render_template = 'cms/plugins/featuresection/parent.html'
+    name = 'Features'
+    allow_children = False
+    model = FeatureModel
+
+    def render(self, context, instance, placeholder):
+        context = super().render(context, instance, placeholder)
         return context
